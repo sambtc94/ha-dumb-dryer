@@ -99,8 +99,9 @@ class DumbDryerConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             if not errors:
                 await self.async_set_unique_id(user_input[CONF_POWER_SENSOR])
                 self._abort_if_unique_id_configured()
-                name = user_input.pop(CONF_NAME, "Dryer")
-                return self.async_create_entry(title=name, data=user_input)
+                name = user_input.get(CONF_NAME, "Dryer")
+                data = {key: value for key, value in user_input.items() if key != CONF_NAME}
+                return self.async_create_entry(title=name, data=data)
 
         return self.async_show_form(
             step_id="user",

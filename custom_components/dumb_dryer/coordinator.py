@@ -133,6 +133,8 @@ class DryerCoordinator(DataUpdateCoordinator[DryerData]):
         else:
             # Keep a deadband between OFF and COOLING thresholds to avoid
             # flapping from short low-power spikes between tumble segments.
+            # When target_state is None, the logic below preserves current
+            # state and clears pending debounce candidates.
             target_state = None
 
         if self._state == STATE_FINISHED:
