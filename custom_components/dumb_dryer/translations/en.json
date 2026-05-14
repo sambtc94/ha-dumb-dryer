@@ -46,13 +46,7 @@
   "entity": {
     "sensor": {
       "state": {
-        "name": "State",
-        "state": {
-          "OFF": "Off",
-          "RUNNING": "Running",
-          "COOLING": "Cooling",
-          "FINISHED": "Finished"
-        }
+        "name": "State"
       },
       "power": {
         "name": "Power"

@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-from datetime import timedelta
-
 DOMAIN = "dumb_dryer"
 PLATFORMS = ["sensor", "binary_sensor"]
 
@@ -32,4 +30,3 @@ STATE_FINISHED = "FINISHED"
 VALID_STATES = [STATE_OFF, STATE_RUNNING, STATE_COOLING, STATE_FINISHED]
 
 COORDINATOR_NAME = "Dumb Dryer Coordinator"
-DEFAULT_SCAN_INTERVAL = timedelta(seconds=DEFAULT_UPDATE_INTERVAL)
