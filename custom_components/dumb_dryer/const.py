@@ -1,0 +1,32 @@
+"""Constants for the Dumb Dryer integration."""
+
+from __future__ import annotations
+
+DOMAIN = "dumb_dryer"
+PLATFORMS = ["sensor", "binary_sensor"]
+
+CONF_POWER_SENSOR = "power_sensor"
+CONF_OFF_THRESHOLD = "off_threshold"
+CONF_COOLING_THRESHOLD = "cooling_threshold"
+CONF_RUNNING_THRESHOLD = "running_threshold"
+CONF_UPDATE_INTERVAL = "update_interval"
+CONF_START_DEBOUNCE = "start_debounce"
+CONF_STOP_DEBOUNCE = "stop_debounce"
+CONF_FINISHED_HOLD = "finished_hold"
+
+DEFAULT_OFF_THRESHOLD = 10.0
+DEFAULT_COOLING_THRESHOLD = 50.0
+DEFAULT_RUNNING_THRESHOLD = 1200.0
+DEFAULT_UPDATE_INTERVAL = 10
+DEFAULT_START_DEBOUNCE = 30
+DEFAULT_STOP_DEBOUNCE = 60
+DEFAULT_FINISHED_HOLD = 300
+
+STATE_OFF = "OFF"
+STATE_RUNNING = "RUNNING"
+STATE_COOLING = "COOLING"
+STATE_FINISHED = "FINISHED"
+
+VALID_STATES = [STATE_OFF, STATE_RUNNING, STATE_COOLING, STATE_FINISHED]
+
+COORDINATOR_NAME = "Dumb Dryer Coordinator"
