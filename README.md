@@ -22,6 +22,19 @@ A Home Assistant custom integration that monitors a dryer power sensor and infer
 
 ## Install
 
+### HACS
+
+1. Add this repository to HACS as a custom repository with the **Integration** category.
+2. Install **Dumb Dryer** from HACS.
+3. Restart Home Assistant.
+4. Go to **Settings → Devices & Services → Add Integration**.
+5. Search for **Dumb Dryer**.
+6. Choose your power sensor and configure thresholds.
+
+For stable HACS installs, publish GitHub releases that match the integration version in `custom_components/dumb_dryer/manifest.json`.
+
+### Manual
+
 1. Copy `custom_components/dumb_dryer` into your Home Assistant `custom_components` directory.
 2. Restart Home Assistant.
 3. Go to **Settings → Devices & Services → Add Integration**.
