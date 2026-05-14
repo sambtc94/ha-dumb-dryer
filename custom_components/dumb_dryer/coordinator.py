@@ -131,6 +131,8 @@ class DryerCoordinator(DataUpdateCoordinator[DryerData]):
         elif power_w <= off_threshold:
             target_state = STATE_OFF
         else:
+            # Keep a deadband between OFF and COOLING thresholds to avoid
+            # flapping from short low-power spikes between tumble segments.
             target_state = None
 
         if self._state == STATE_FINISHED:
