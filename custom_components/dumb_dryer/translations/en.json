@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up Dumb Dryer",
+        "description": "Pick the power sensor and tune thresholds for your dryer.",
+        "data": {
+          "name": "Name",
+          "power_sensor": "Power sensor entity",
+          "off_threshold": "Off threshold (W)",
+          "cooling_threshold": "Cooling threshold (W)",
+          "running_threshold": "Running threshold (W)",
+          "start_debounce": "Start debounce (s)",
+          "stop_debounce": "Stop debounce (s)",
+          "finished_hold": "Finished hold time (s)",
+          "update_interval": "Update interval (s)"
+        }
+      }
+    },
+    "error": {
+      "invalid_thresholds": "Thresholds must satisfy off <= cooling <= running."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Dumb Dryer options",
+        "description": "Adjust thresholds, debounce timers, and source power sensor.",
+        "data": {
+          "name": "Name",
+          "power_sensor": "Power sensor entity",
+          "off_threshold": "Off threshold (W)",
+          "cooling_threshold": "Cooling threshold (W)",
+          "running_threshold": "Running threshold (W)",
+          "start_debounce": "Start debounce (s)",
+          "stop_debounce": "Stop debounce (s)",
+          "finished_hold": "Finished hold time (s)",
+          "update_interval": "Update interval (s)"
+        }
+      }
+    },
+    "error": {
+      "invalid_thresholds": "Thresholds must satisfy off <= cooling <= running."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "state": {
+        "name": "State",
+        "state": {
+          "OFF": "Off",
+          "RUNNING": "Running",
+          "COOLING": "Cooling",
+          "FINISHED": "Finished"
+        }
+      },
+      "power": {
+        "name": "Power"
+      }
+    },
+    "binary_sensor": {
+      "running": {
+        "name": "Running"
+      },
+      "cooling": {
+        "name": "Cooling"
+      },
+      "finished": {
+        "name": "Finished"
+      },
+      "cycle_active": {
+        "name": "Cycle Active"
+      }
+    }
+  }
+}
